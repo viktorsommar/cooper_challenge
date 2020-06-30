@@ -3,8 +3,9 @@ Rails.application.routes.draw do
                               at: 'api/v1/auth', skip: %i[omniauth_callbacks]
 
   namespace :api do
-    namespace :v1 do
+    namespace :v1, defaults: { format: :json } do
       resources :pings, only: %i[index], constraints: { format: 'json' }
+      resources :performance_data, only: [:create]
     end
   end
 end

@@ -8,11 +8,11 @@ RSpec.describe User, type: :model do
   describe 'Database table' do
     it { is_expected.to have_db_column :encrypted_password }
     it { is_expected.to have_db_column :email }
-    it { is_expected.to have_db_column :tokens }
+    it { is_expected.to have_db_column :token }
   end
 
   describe 'Validations' do
-    it { is_expected.to validate_presence__of :email }
+    it { is_expected.to validate_presence_of :email }
     it { is_expected.to validate_presence_of :password }
 
     context 'should not have an invalid email address' do
@@ -39,6 +39,6 @@ RSpec.describe User, type: :model do
     end
   end
   describe 'relations' do
-    it { is_expected.to have_many :performace_data }
+    it { is_expected.to have_many :performance_data }
   end
 end

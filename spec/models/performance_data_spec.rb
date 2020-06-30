@@ -9,7 +9,7 @@ RSpec.describe PerformaceData, type: :model do
   end
   describe 'Factory' do
     it 'should have valid Factory' do
-      expect(create(:performace_data)).to be_valid
+      expect(create(:performance_data)).to be_valid
     end
   end
 end
