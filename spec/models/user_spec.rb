@@ -38,4 +38,7 @@ RSpec.describe User, type: :model do
       end
     end
   end
+  describe 'relations' do
+    it { is_expected.to have_many :performace_data }
+  end
 end
