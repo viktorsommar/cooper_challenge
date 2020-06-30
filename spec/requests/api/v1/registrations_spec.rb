@@ -1,4 +1,4 @@
-RSpec.describe 'POST '/api/v1/auth'', type: :request do
+RSpec.describe 'POST /api/v1/auth', type: :request do
     let(:headers) { { HTTP_ACCEPT: 'application/json' } }
   
     describe 'with valid credentials' do
