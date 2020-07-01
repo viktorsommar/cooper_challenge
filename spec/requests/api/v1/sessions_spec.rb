@@ -39,17 +39,17 @@ RSpec.describe 'POST /api/v1/auth/sign_in', type: :request do
     end
 
       it 'returns 401 response status' do
-        expected(response).to have_http_status 401
+        expect(response).to have_http_status 401
       end
 
       it 'returns error message' do
-        expect(response_json['errors']).to eq ['Invalid login credentials. Please try again']
+        expect(response_json['errors']).to eq ['Invalid login credentials. Please try again.']
       end
     end
 
     describe 'with invalid email' do
       before do
-        post '/api/v1/auth/sign',
+        post '/api/v1/auth/sign_in',
           params: {
             email: 'wrong@email.com',
             password: user.password

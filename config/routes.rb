@@ -4,8 +4,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1, defaults: { format: :json } do
-      resources :pings, only: %i[index], constraints: { format: 'json' }
-      resources :performance_data, only: [:create]
+      resources :performance_data, only: [:create, :index]
     end
   end
 end
