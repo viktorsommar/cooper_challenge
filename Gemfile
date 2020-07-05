@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors', require: 'rack/cors'
 gem 'devise_token_auth'
 gem 'prettier'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
